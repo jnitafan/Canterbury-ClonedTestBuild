@@ -1,0 +1,79 @@
+@import "theme/theme_variables"; // <-------- Add your variables into this file. Also add variables to overwrite Bootstrap or UnderStrap variables here
+@import "assets/bootstrap4"; // <-------- Loads Bootstrap4
+@import "understrap/understrap"; // <-------- Loads the UnderStrap defaults. Just a few classes to incorporate BS in WP
+// @import "understrap/woocommerce"; // <-------- Loads WooCommerce style fixes. Comment out if you aren't using WooCommerce
+
+// Optional files - If you dont use the corresponding scripts/fonts comment em out
+@import "assets/font-awesome"; // <-------- Font Awesome Icon font
+@import "assets/underscores"; // <-------- Underscores media styles
+
+// Any additional imported files //
+@import "theme/theme"; // <-------- That's where you can add your own design. Thats your part!
+@import "theme/contact-form7"; // <-------- Contact Form 7 - Bootstrap 4 support
+
+// Fonts used: Libre Baskerville & Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:ital,wght@0,400;1,600&display=swap');
+
+//apply default fonts
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+p,
+a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+// navbar
+#wrapper-navbar {
+
+  #img-logo {
+    max-height: 100%;
+    width: auto;
+  }
+
+  #logo-link {
+    height: 100px;
+    transition: 0.4s;
+  }
+
+  #main-menu {
+    height: 100px;
+    transition: 0.4s;
+    line-height: 85px;
+  }
+
+
+  a {
+    background-color: $primary;
+    text-align: center;
+    color: $dark;
+  }
+
+  li {
+    &.active {
+      font-style: italic;
+      border-style: none none solid none;
+
+      a {
+        color: $dark;
+      }
+    }
+  }
+}
+
+// footer
+#wrapper-footer {
+  background-color: $dark;
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $light;
+  }
+}
